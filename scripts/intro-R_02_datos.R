@@ -19,10 +19,10 @@ rm(dataWeb) # Elimina la variable dataWeb del espacio de trabajo.
 
 # Otras funciones para leer sets de datos en otros tipos de archivos
 # Archivos de datos separados por comas (.csv)
-# data <- read.csv(("C:/documents/archivo.txt")
+data <- read.csv("C:/documents/archivo.txt") # Lee los datos del archivo que está guardado en el disco duro y los convierte en un set de datos de R (data frame).
 
 # Archivos de datos separados por TAB (.txt o .tsv).
-# data <- read.table("C:/documents/archivo.txt", header = TRUE, sep = "\t")
+# data <- read.table("C:/documents/archivo.txt", header = TRUE, sep = "\t") # # Lee los datos del archivo que está guardado en el disco duro y los convierte en un set de datos de R (data frame).
 
 # Archivos de Excel
 # No se recomienda importar archivos guardados en este formato porque los datos pueden alterarse.
