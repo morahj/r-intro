@@ -14,4 +14,4 @@
     * [_intro-R_08_regresion.R_](https://github.com/morahj/r-intro/blob/master/scripts/intro-R_08_regresion.R): Modelo de regresión lineal y exponencial.
 
 ### Videos
-* [_Introducción a R_](https://www.youtube.com/playlist?list=PLbiDOpXttMuSpOW3_jJYFSe3N27udiicr): Lista de reproducción en Youtube con videos de la ejecución y explicación de los procedimientos en RStudios.
+* [_Introducción a R_](https://www.youtube.com/playlist?list=PLbiDOpXttMuSpOW3_jJYFSe3N27udiicr): Lista de reproducción en Youtube con videos de la ejecución y explicación de los procedimientos en RStudio.
