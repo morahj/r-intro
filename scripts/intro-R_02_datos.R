@@ -19,7 +19,7 @@ rm(dataWeb) # Elimina la variable dataWeb del espacio de trabajo.
 
 # Otras funciones para leer sets de datos en otros tipos de archivos
 # Archivos de datos separados por comas (.csv)
-data <- read.csv("C:/documents/archivo.txt") # Lee los datos del archivo que está guardado en el disco duro y los convierte en un set de datos de R (data frame).
+data <- read.csv("datosR.txt") # Lee los datos del archivo que está guardado en el disco duro y los convierte en un set de datos de R (data frame).
 
 # Archivos de datos separados por TAB (.txt o .tsv).
 # data <- read.table("C:/documents/archivo.txt", header = TRUE, sep = "\t") # # Lee los datos del archivo que está guardado en el disco duro y los convierte en un set de datos de R (data frame).
@@ -65,7 +65,7 @@ dataEdadSexo <-  select(data1, AFEDAD, SEXO) # Extrae los datos correspondientes
 # Agregar una nueva columna/variable al set de datos
 # Se crearán dos variables que promedien las medidas de fuerza prensil ()
 FPmeanD1 <- rowMeans(select(data1, FP_1D, FP_2D, FP_3D), na.rm = TRUE) # Crea un vector con los datos correspondientes al promedio de las 3 columnas dadas como parámetro. Corresponde a la fuerza prensil promedio de la mano derecha.
-FPmeanI1 <- rowMeans(select(data1, FP_1I, FP_2I, FP_3D), na.rm = TRUE) # Crea un vector con los datos correspondientes al promedio de las 3 columnas dadas como parámetro. Corresponde a la fuerza prensil promedio de la mano izquierda
+FPmeanI1 <- rowMeans(select(data1, FP_1I, FP_2I, FP_3I), na.rm = TRUE) # Crea un vector con los datos correspondientes al promedio de las 3 columnas dadas como parámetro. Corresponde a la fuerza prensil promedio de la mano izquierda
 
 data2 <- mutate(data1, FPmeanD = FPmeanD1, FPmeanI = FPmeanI1) # Toma todas las observaciones y variables de data1, y les adiciona el vector creado anteriormente como una nueva columna/variable.
 

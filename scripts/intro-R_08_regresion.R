@@ -9,8 +9,8 @@ regLin <- lm(FPmeanI ~ FPmeanD, # Variable "FPmeanI" en función de la variable 
            data = data2 # Set de datos donde se encuentran ambas variables.
            )
 
-summary(reg1) # Ver los resultados de la regresión.
-confint(reg1, level = .95) # Obtener intervalo de confianza del 95% para los coeficientes de la regresión.
+summary(regLin) # Ver los resultados de la regresión.
+confint(regLin, level = .95) # Obtener intervalo de confianza del 95% para los coeficientes de la regresión.
 
 # MODELO DE REGRESIÓN EXPONENCIAL #####
 

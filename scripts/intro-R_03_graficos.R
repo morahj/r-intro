@@ -63,9 +63,9 @@ boxplot(select(data2, FPmeanD, FPmeanI), # Variables a graficar. Pueden ser dist
 # Diagrama de dispersión sencillo
 plot(data2$FPmeanD, data2$FPmeanI, # Variables x, y, a graficar.
      pch = 19,         # Circulo sólido
-     cex = 0.5,        # Reduce el tamaño al 50%.
-     col = "#cc0000",  # Color
-     main = "Fuerza prensil de la mano izquierda como función de la derecha",
+     cex = 0.1,        # Reduce el tamaño al 10%.
+     col = "red",  # Color
+     main = "Fuerza prensil de la mano izquierda \ncomo función de la derecha",
      xlab = "Fuerza prensil mano derecha (kg/m2)",
      ylab = "Fuerza prensil mano izquierda (kg/m2)"
 )

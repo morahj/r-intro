@@ -17,7 +17,7 @@ row.names(pregnantDays) <- pregnantDays[,1] # Asigna identificadores a cada obse
 pregnantDays <- select(pregnantDays, days) # Elimina la columna/variable de números 1:25.
 
 # Contexto del problema:
-# The length of human pregnancy is known to have a mean of 266 days and a standard deviation of 16 days. Based on records from a large women's hospital, a random sample of 210 women who were smoking and/or drinking alcohol during their pregnancy and their pregnancy lengths are recorded in the datafile linked below. Do the data provide enough evidence to support the (well-known) fact that women who smoke and/or drink alcohol during their pregnancy have shorter pregnancies than women in general (in other words, are more likely to have premature labor)?
+# The length of human pregnancy is known to have a mean of 266 days and a standard deviation of 16 days. Based on records from a large women's hospital, a random sample of 320 women who were smoking and/or drinking alcohol during their pregnancy and their pregnancy lengths are recorded in the datafile linked below. Do the data provide enough evidence to support the (well-known) fact that women who smoke and/or drink alcohol during their pregnancy have shorter pregnancies than women in general (in other words, are more likely to have premature labor)?
 
 # Ver histograma de la variable para evaluar normalidad en su distribución
 hist(pregnantDays$days,
@@ -43,6 +43,8 @@ ninasAntrop <- ninasAntrop[ ,-1] # Elimina la columna/variable de números 1:25.
 # Contexto del problema:
 # Suponga que la estatura media es de 105.5cm. Se tomó una muestra aleatoria de 25 niñas de cinco años de esta comunidad y se encontró una estatura media de 104.7cm. Use una significancia de 0.04 para determinar si está frente a evidencia experimental que nos permita afirmar que la estatura media de las niñas de 5 años de esa comunidad es significativamente mayor de lo que se afirma en la información de referencia.
 
+hist(ninasAntrop$talla)
+
 # Ejecución del t-test para una muestra.
 t.test(ninasAntrop$talla, alternative = "two.sided", conf.level = .96, mu = 105.5)
 
@@ -50,7 +52,7 @@ t.test(ninasAntrop$talla, alternative = "two.sided", conf.level = .96, mu = 105.
 # Calculo del estadístico de la distribución t.
 # Contexto: 
 # Construya la estimación por intervalo de confianza del 98% para la estatura promedio de las niñas de 5 años de esta comunidad si en una muestra aleatoria de 20 niñas de cinco años de esta comunidad se encontró una estatura media de 105,4cm y una desviación estándar de 1.24cm.
-
+?qt
 t <- qt(.99, 19) # Estadístico t.
 err <- t * 1.24 / sqrt(20) # Error estándar para el IC.
 c(105.4 - err, 105.4 + err) # Intervalo de confianza del 98%.
@@ -75,7 +77,7 @@ t.test(tratINR$INR.despues, tratINR$INR.antes, paired = TRUE, conf.level = .96)
 
 # t-test para diferencia de medias de grupos independientes
 # Contexto del problema:
-# Suponga que la tabla contiene los valores del INR de dos grupos de personas distintas, no relacionadas, que recibieron tratamientos diferentes para subir el nivel del INR. Use una significancia de 0.01 para determinar si hubo una diferencia mayor a 0.4 en el nivel de INR entre los grupos.
+# Suponga que la tabla contiene los valores del INR de dos grupos de personas distintas, no relacionadas, que recibieron tratamientos diferentes para subir el nivel del INR. Use una significancia de 0.05 para determinar si hubo una diferencia mayor a 0.4 en el nivel de INR entre los grupos.
 
 # Ejecución de la prueba t-test para diferencia de medias de datos independientes
 t.test(tratINR$INR.despues, tratINR$INR.antes, conf.level = .95, mu = 0.4, alternative = "greater")

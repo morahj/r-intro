@@ -31,7 +31,7 @@ estudTable <- table(estudiantesProp)
 estudTable # Ver tabla de frecuencias creada.
 
 # Ejecución de la prueba de proporciones 
-prop.test(c(161, 189), # Casos de éxito de ambos grupos, ingresados como vector.
+prop.test(c(161, 100), # Casos de éxito de ambos grupos, ingresados como vector.
           c(264, 289), # Casos totales de ambos grupos, ingresados como vector.
           conf.level = .99 # Nivel de confianza.
           ) # La hipótesis nula corresponde a que la proporción sea igual entre ambos grupos.
