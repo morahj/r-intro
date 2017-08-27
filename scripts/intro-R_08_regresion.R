@@ -29,3 +29,7 @@ regExp <- lm(log(horasTrab$horasTrab) ~ horasTrab$Pacientes) # Variable de respu
 summary(regExp)
 exp(regExp$coefficients) # Obtener coeficientes verdadedos aplicando la función exponencial.
 
+
+ECUACIÓN DEL MODELO EXPONENCIAL
+y = 2.5836 e ^ 0.136X
+horasTrab = 2.5836 e ^ 0.136(Pacientes)
